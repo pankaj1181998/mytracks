@@ -2,8 +2,10 @@
 
 one:
   title: MyString
-  desc: MyText
+  vid_link: MyString
+  image: MyString
 
 two:
   title: MyString
-  desc: MyText
+  vid_link: MyString
+  image: MyString
