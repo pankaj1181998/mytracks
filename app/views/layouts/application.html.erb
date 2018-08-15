@@ -7,13 +7,21 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+      body { 
+        background-image: url('/assets/images/bkg.jpg') ;
+      }
     
-    
+    </style>
   </head>
 
-  <body>
+  <body style="background-color:#f0f0f0;">
     <% unless current_user %> 
-      <%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path %>
+      <h4><%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path %></h4>
     <% else %>
       <%= current_user[:name] %>
       <%= link_to "Logout", destroy_user_session_path, method: :delete %>

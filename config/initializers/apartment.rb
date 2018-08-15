@@ -48,8 +48,9 @@ Apartment.configure do |config|
   #   end
   # end
   #
-  config.tenant_names = lambda { User.pluck(:email) }  
   config.excluded_models = %w{ User } 
+  config.tenant_names = lambda { User.pluck(:email) }  
+  config.use_schemas = true
   # PostgreSQL:
   #   Specifies whether to use PostgreSQL schemas or create a new database per Tenant.
   #
@@ -107,3 +108,4 @@ end
 Rails.application.config.middleware.use Apartment::Elevators::Subdomain
 # Rails.application.config.middleware.use Apartment::Elevators::FirstSubdomain
 # Rails.application.config.middleware.use Apartment::Elevators::Host
+Apartment::Elevators::Subdomain.excluded_subdomains = ['www']

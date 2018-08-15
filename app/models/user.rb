@@ -30,4 +30,6 @@ after_destroy do |user|
   Apartment::Tenant.drop(user.email)
 end 
 
+
+
 end
