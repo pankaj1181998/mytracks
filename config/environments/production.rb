@@ -99,4 +99,5 @@ Rails.application.configure do
     config.logger = ActiveSupport::TaggedLogging.new(logger)
   end
   
+  RAILS_ENV=production bundle exec rake assets:precompile
 end
