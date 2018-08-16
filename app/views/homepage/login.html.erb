@@ -5,8 +5,18 @@
   <div class="w3-container w3-dark-grey">
     <h4>Menu</h4>
   </div>
-  <a href="#" class="w3-bar-item w3-button">Link 1</a>
-  <a href="#" class="w3-bar-item w3-button">Link 2</a>
+
+  <img src= "<% current_user.image %>" alt="Sorry" style="width:90%">
+  
+  <li class="w3-bar-item w3-button"></li>
+  <li class="w3-bar-item w3-button"></li>
+  <li class="w3-bar-item w3-button text-center">Welcome </li>
+  <li class="w3-bar-item w3-button"><%= current_user.name %> </li>
+<a href="#" class="w3-bar-item w3-button"><i class="fa fa-home"></i></a> 
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-search"></i></a> 
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a> 
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-globe"></i></a> 
+  
   <a href="#" class="w3-bar-item w3-button">Link 3</a>
 </div>
 
@@ -15,6 +25,8 @@
 
 <div>
   <button class="w3-button w3-dark w3-xlarge" onclick="w3_open()">&#9776;</button>
+
+
 
 <!--************************************************************************************************************* -->
 <% else %>
