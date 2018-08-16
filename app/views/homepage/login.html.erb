@@ -12,12 +12,10 @@
   <li class="w3-bar-item w3-button"></li>
   <li class="w3-bar-item w3-button text-center">Welcome </li>
   <li class="w3-bar-item w3-button"><%= current_user.name %> </li>
-<a href="#" class="w3-bar-item w3-button"><i class="fa fa-home"></i></a> 
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-search"></i></a> 
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a> 
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-globe"></i></a> 
+  <li><%=link_to "Add Video", controller: "apiyoutube", action: "search" %></li>
+        
   
-  <a href="#" class="w3-bar-item w3-button">Link 3</a>
+  <a href="#" class="w3-bar-item w3-button">Add Video</a>
 </div>
 
 <!-- Page Content -->
@@ -25,6 +23,46 @@
 
 <div>
   <button class="w3-button w3-dark w3-xlarge" onclick="w3_open()">&#9776;</button>
+
+
+
+
+<section class="moveright" >
+    <div >
+      <br>
+      </div>
+    <script>
+      function refreshPage(){
+         setTimeout(window.location.reload(),5000);
+      } 
+    </script>
+
+    <% Mydb.all.each do |mydb| %>
+    <div class="panel panel-success">
+      <div class="panel-heading">
+      <br><br>
+        
+        <% if mydb.email == current_user.email %> 
+        <%= image_tag(mydb.image, :alt => "Pic Unavailable") %>
+      <b> <%= mydb.title %> 
+        <%= link_to "Open Video", mydb.vid_link,class: " btn btn-primary" ,:target => "_blank" %>
+        <%= link_to 'Destroy', mydb, method: :delete, data: { confirm: 'Are you sure?' },class: "btn btn-danger" ,  :onClick => "refreshPage()" %>
+      </b>  
+        
+      <br><br>
+      </div>
+
+    </div>
+    <% else %>
+
+    <% end %>
+      
+      
+    
+    <% end %>
+</section>
+
+
 
 
 

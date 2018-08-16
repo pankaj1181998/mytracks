@@ -1,0 +1,9 @@
+<% if !@res["items"].empty? %>
+<%= image_tag(@res["items"][0]["snippet"]["thumbnails"]["default"]["url"], :alt => "Pic Unavailable") %>
+
+ <%= @res["items"][0]["snippet"]["title"] %>
+ <%= @res["items"][0]["snippet"]["description"] %>
+ <p><b>Added Successfully..</b></p>
+ <% else %>
+ <b><p>Wrong Link!!! Try Another One</p></b>
+ <% end %>
