@@ -22,14 +22,5 @@ def self.from_omniauth(auth)
   end
 end
 
-after_create do |user|
-  Apartment::Tenant.create(user.email)
-end 
-
-after_destroy do |user|
-  Apartment::Tenant.drop(user.email)
-end 
-
-
 
 end
