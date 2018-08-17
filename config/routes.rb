@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  get 'privacy/policy'
+  get 'information/contact'
   get 'apiyoutube/search'
   get 'apiyoutube/ldetails'
   post 'apiyoutube/ldetails'

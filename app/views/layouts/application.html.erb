@@ -36,15 +36,13 @@ function w3_close() {
     
 
 <div class="topnav">
-  <a class="active" href="#home">Home</a>
-  <a href="#news">News</a>
-  <a href="#contact">Contact</a>
+  <%= link_to "Home", homepage_login_path , class: "active" %>
+  <%= link_to "Contact", information_contact_path %>
   <div class="topnav-right">
+    <%= link_to "Policy", privacy_policy_path %>
     
-    <a href="#about">About</a>
-    <a href="#search">
     <% unless current_user %> 
-      <%= link_to "Sign Up", user_facebook_omniauth_authorize_path , class: "btn btn-success" %><
+      <%= link_to "Sign Up", user_facebook_omniauth_authorize_path , class: "btn btn-success" %>
     <% else %>
       <%= current_user[:name] %>
       <%= link_to "Logout", destroy_user_session_path, method: :delete , class: "btn btn-danger" %>
