@@ -15,7 +15,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style>
       body { 
-        background-image: url('/assets/images/bkg.jpg') ;
+        background-image: url(<%= asset_path 'bkg.jpg' %>) ;
       }
 
     </style>
@@ -32,19 +32,20 @@ function w3_close() {
 </script>
   </head>
 
-  <body style="background-color:#f0f0f0;">
+  <body>
     
 
 <div class="topnav">
   <%= link_to "Home", homepage_login_path , class: "active" %>
-  <%= link_to "Contact", information_contact_path %>
+  <%= link_to "Contact", information_contact_path , class: "btn btn-primary"%>
   <div class="topnav-right">
-    <%= link_to "Policy", privacy_policy_path %>
+    <%= link_to "How to Use ", usage_steps_path , class: "btn btn-primary" %>
+    <%= link_to "Policy", privacy_policy_path , class: "btn btn-primary" %>
     
     <% unless current_user %> 
       <%= link_to "Sign Up", user_facebook_omniauth_authorize_path , class: "btn btn-success" %>
     <% else %>
-      <%= current_user[:name] %>
+      <% current_user[:name] %>
       <%= link_to "Logout", destroy_user_session_path, method: :delete , class: "btn btn-danger" %>
     <% end %>
     </a>

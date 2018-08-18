@@ -1,3 +1,4 @@
+
 <% if user_signed_in? %>
 
 <!-- Sidebar -->
@@ -5,15 +6,15 @@
   <div class="w3-container w3-dark-grey">
     <h4>Menu</h4>
   </div>
-
-  <img src= "<% current_user.image %>" alt="Sorry" style="width:90%">
-  
-  <li class="w3-bar-item w3-button"></li>
-  <li class="w3-bar-item w3-button"></li>
-  <li class="w3-bar-item w3-button text-center">Welcome </li>
-  <li class="w3-bar-item w3-button"><%= current_user.name %> </li>
-  <li><%=link_to "Add Video", controller: "apiyoutube", action: "search" %></li>
-  
+  <br>
+  <div class="im">
+  <img src= "<%= current_user.image %>" alt="Img not found"  class="w3-circle">
+  </div>
+  <br><hr>
+ <strong> 
+  <h4 class="w3-bar-item "> <%= current_user.name %> </h4>
+  <li class="w3-bar-item btn btn-primary"><%=link_to "Add Video", controller: "apiyoutube", action: "search"%>
+  </li></strong>
   </div>
 
 <!-- Page Content -->
@@ -36,21 +37,19 @@
     </script>
 
     <% Mydb.all.each do |mydb| %>
-    <div class="panel panel-success">
-      <div class="panel-heading">
+      <div class="p1">
       <br><br>
         
         <% if mydb.email == current_user.email %> 
         <%= image_tag(mydb.image, :alt => "Pic Unavailable") %>
-      <b> <%= mydb.title %> 
+       <b> <%= mydb.title %> 
         <%= link_to "Open Video", mydb.vid_link,class: " btn btn-primary" ,:target => "_blank" %>
-        <%= link_to 'Destroy', mydb, method: :delete, data: { confirm: 'Are you sure?' },class: "btn btn-danger" ,  :onClick => "refreshPage()" %>
+        <%= link_to 'Destroy', mydb, method: :delete, data: { confirm: 'Are you sure?' },class: "btn btn-danger" ,  
+        :onClick => "refreshPage()" %>
       </b>  
         
       <br><br>
-      </div>
-
-    </div>
+   </div>
     <% else %>
 
     <% end %>
@@ -65,10 +64,12 @@
 
 
 <!--************************************************************************************************************* -->
-<% else %>
 
-<div class="jumbotron text-center">
-  <h1>Login!!!</h1>
+
+<% else %>
+   <br><br><br><br><br>
+<div class="text-center">
+<h1><strong>Sign Up!!</strong></h1>
 </div>
 
 <% end %>
