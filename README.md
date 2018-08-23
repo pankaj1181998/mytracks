@@ -22,3 +22,4 @@ TWO DIFFERENT TABLE ARE CREATED .
 
 ![img2](https://user-images.githubusercontent.com/29759141/44504610-49f94180-a6ba-11e8-8c16-1c342292edd3.png)
 
+![img3](https://user-images.githubusercontent.com/29759141/44504684-9b093580-a6ba-11e8-990d-860bb7a510cc.png)
