@@ -27,7 +27,7 @@ def ldetails
   end	
   respond_to do |format|
 
-  format.html { } # index.html.erb
+  format.html { } 
   format.json { render json: @res  }
   format.js
   end

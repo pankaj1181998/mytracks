@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>From:</strong>
+  <%= @buy.from %>
+</p>
+
+<p>
+  <strong>To:</strong>
+  <%= @buy.to %>
+</p>
+
+<p>
+  <strong>Doj:</strong>
+  <%= @buy.doj %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @buy.duration %>
+</p>
+
+<p>
+  <strong>Airlines:</strong>
+  <%= @buy.airlines %>
+</p>
+
+<p>
+  <strong>Fare:</strong>
+  <%= @buy.fare %>
+</p>
+
+<p>
+  <strong>Dept:</strong>
+  <%= @buy.dept %>
+</p>
+
+<%= link_to 'Edit', edit_buy_path(@buy) %> |
+<%= link_to 'Back', buys_path %>

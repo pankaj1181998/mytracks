@@ -1,0 +1,68 @@
+<section class="p1">
+	<strong><h4>Domestic Flight</h4>
+		DATABASE HAS ENTRIES FOR THESE DETAILS ONLY.<br>
+		FROM - DELHI , To - BANGLORE , DATE 2018-08-23
+	<hr>
+	<%= form_tag(buys_path, :method => "post" , remote: true) do %> 
+
+	
+	<div id="space">
+
+	FROM
+	<select>
+  	<option value="DELHI">DELHI</option>
+  	<option value="CHENNAI">CHENNAI</option>
+  	<option value="BANGLORE">BANGLORE</option>
+  	<option value="MUMBAI">MUMBAI</option>
+	<option value="PUNE">PUNE</option>
+  	<option value="KOLKATA">KOLKATA</option>
+	</select> 
+	<span id="space">
+	TO
+	<select>
+  	<option value1="DELHI">DELHI</option>
+  	<option value1="CHENNAI">CHENNAI</option>
+  	<option value1="BANGLORE">BANGLORE</option>
+  	<option value1="MUMBAI">MUMBAI</option>
+	<option value1="PUNE">PUNE</option>
+  	<option value1="KOLKATA">KOLKATA</option>
+	</select> 
+	</span>
+
+	</div>
+	 <br>
+
+
+	<div id="space"> 
+	DATE(YYYY-MM-DD)
+	<input type="text" name="date"><br>
+	</div>
+
+	</div>
+	<br>
+	
+	<div id="space">
+	SEATS
+	<input type="text" name="seat">
+	</div>
+
+	<br>
+	<button class="btn btn-primary" >Search</button>
+	
+	<% end %>
+	<hr>
+	</strong>
+</section>
+<hr>
+
+
+<% if @posts.present? %>
+  <%= render @posts %>
+<% else %>
+  <p>There are no posts containing the term(s) <%= params[:search] %>.</p>
+<% end %>
+<% if @posts.present? %>
+  <%= render @posts %>
+<% else %>
+  <p>There are no posts containing the term(s) <%= params[:search] %>.</p>
+<% end %>

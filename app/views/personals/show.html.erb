@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @personal.email %>
+</p>
+
+<p>
+  <strong>From:</strong>
+  <%= @personal.from %>
+</p>
+
+<p>
+  <strong>To:</strong>
+  <%= @personal.to %>
+</p>
+
+<p>
+  <strong>Seats:</strong>
+  <%= @personal.seats %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @personal.date %>
+</p>
+
+<%= link_to 'Edit', edit_personal_path(@personal) %> |
+<%= link_to 'Back', personals_path %>

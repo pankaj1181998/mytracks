@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   
+  get 'mytickets/details'
+  get 'flight/search'
+  resources :personals
+  resources :buys
   get 'usage/steps'
   get 'privacy/policy'
   get 'information/contact'
@@ -9,7 +13,7 @@ Rails.application.routes.draw do
   get 'apiyoutube/search' ,to: 'apiyoutube#search'
   post 'apiyoutube/search'
   resources :mydbs
-  root :to => 'homepage#login'
+ root :to => 'flight#search'
   # devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   get 'homepage/login'
