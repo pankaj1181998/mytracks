@@ -1,25 +1,19 @@
-# README
+### STACK USED - RUBY ON RAILS 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### HOW TO OPEN 
+- Install ruby 2.4.0 and then install Rails 5.0 using rvm .
+- Download the files and run "bundle install" to install all the gem files .
+- After that run the server by using " rails -s " command .
+- Open the browser "http://localhost:3000/" .
 
-Things you may want to cover:
+### APPROACH USED TO MAKE THE APP
+- TO EASE THE PROCESS FOR EACH AND EVERY USER , FACEBOOK AUTHENTICATION ( USING OMNIAUTH & DEVISE ) IS ADDED . 
+- EVERY USER CAN SIGN UP USING THEIR FACEBOOK ACCOUNT HASSLE FREE .
 
-* Ruby version
+### DATABASES
+TWO DIFFERENT TABLE ARE CREATED . 
+- ONE IS TO STORE THE THE INFORMATION OF FLIGHTS (DEPT , ARRIVAL , FARES ,AIRLINES ,DATE ,DURATION ) etc. 
 
-* System dependencies
+- SECOND TO STORE THE BOOKING DETAILS OF USER WHERE EMAIL_ID FROM FACEBOOK IS CONSIDERED AS PRIMARY KEY.                  (EMAIL,COST,FARE,ARR,DATE_OF_JOURNEY)etc.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# mytracks
+### IMAGES
