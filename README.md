@@ -26,4 +26,4 @@ TWO DIFFERENT TABLE ARE CREATED .
 
 ![img4](https://user-images.githubusercontent.com/29759141/44504706-c8ee7a00-a6ba-11e8-9d5e-3a1fb9c4c1f5.png)
 
-### This repository is old one . The app crashed in another repository.
+### This repository is old one . The app crashed in another repository so used this .
