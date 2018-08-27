@@ -1,0 +1,10 @@
+<% if !@res["data"]["returnflights"].empty? %>
+
+ <%= @res["data"]["returnflights"] %>
+ <%= @res["items"][0]["snippet"]["description"] %>
+ 
+ <% else %>
+ 
+ <b><p>
+ Wrong Link!!! Try Another One</p></b>
+ <% end %>

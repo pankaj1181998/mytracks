@@ -8,10 +8,6 @@ class BuysController < ApplicationController
   end
 
 
-  
-
-  
-  
   # GET /buys/1
   # GET /buys/1.json
   def show
