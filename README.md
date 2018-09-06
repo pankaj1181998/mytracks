@@ -10,6 +10,6 @@
 ### WHAT IT DOES
 - It allows user to login using facebook.
 - The user can create it's own playlist of youtube videos.
-- Open the youtube video and copy video "LINK ID" present in the end of video url.   example linkid - foE1mO2yM04
+- Open the youtube video and copy video "LINK ID" present in the end of video url.   example link_id - foE1mO2yM04
 - Click "Add Video" and paste the link ID .
 - Video is added to your playlist.
