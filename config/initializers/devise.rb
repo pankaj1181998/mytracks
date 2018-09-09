@@ -281,5 +281,5 @@ Devise.setup do |config|
   # so you need to do it manually. For the users scope, it would be:
   
   config.secret_key = Rails.application.credentials.secret_key_base   
-  config.omniauth :facebook, "155887985084238", "a491628ad0aca1e143f008b2aa886053", callback_url: "http://localhost:3000/users/auth/facebook/callback"
+  config.omniauth :facebook, "155887985084238", "a491628ad0aca1e143f008b2aa886053", callback_url: "https://secret-wave-55525.herokuapp.com/users/auth/facebook/callback"
 end
