@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   get 'apiyoutube/search' ,to: 'apiyoutube#search'
   post 'apiyoutube/search'
   resources :mydbs
- root :to => 'flight#search'
+ root :to => 'homepage#login'
 
   # devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
